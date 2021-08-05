@@ -25,6 +25,11 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/panel', function () {
 
 Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::prefix('admin')->group(function () {
+        Route::get('deneme', function () {
+            return view('deneme');
+            
+            
+        });
     
 });
 }); 
