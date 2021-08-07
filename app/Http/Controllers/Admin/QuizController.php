@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Quiz;
+use PhpParser\Node\Expr\PostDec;
 
 class QuizController extends Controller
 {
@@ -26,7 +27,7 @@ class QuizController extends Controller
      */
     public function create()
     {
-        return 'create fonksiyonu';
+        return view('admin.quiz.create');
     }
 
     /**
@@ -37,7 +38,7 @@ class QuizController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return $request->post();    
     }
 
     /**
